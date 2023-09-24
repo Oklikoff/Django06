@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Table</title>
+</head>
+
+    <h2>Таблица</h2>
+    <table>
+        <tr>
+            {% for t in title %}
+                <th>{{ t }}</th>
+            {% endfor %}
+
+        </tr>
+        {% for t in table %}
+            <tr>
+                {% for one in t %}
+                    <td>{{ one }}</td>
+                {% endfor %}
+            </tr>
+        {% endfor %}
+    </table>
+<form action="" method="post">
+    {% csrf_token %}
+    {{ forma }}
+    <input type="submit" value="POISK">
+</form>
+</body>
+</html>
